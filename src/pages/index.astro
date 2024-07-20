@@ -1,0 +1,81 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/webp" href="/favicon.webp" />
+	<meta name="viewport" content="width=device-width" />
+	<title>TheAnnoying's Webpage</title>
+</head>
+<body>
+	<h1>TheAnnoying's Webpage</h1>
+	<div class="content">
+		<div>
+			<p class="section">I make <a href="https://github.com/TheAnnoying/" style="background-color: black;"><img src="github-mark-white.svg" height="25" /> websites</a> & design images</p>
+			<p class="section">I love Minecraft things such as models, resource packs, <span>servers</span> and <span>plugins</span><br>i really like minecraft animations and <span>renders</span></p>
+			<p class="section">My projects consist of things I find <span>useful</span> and <span>cool</span></p>
+		</div>
+		<div id="card">
+			<div style="width: 100%; height: 100%; display: grid; place-items: center; text-align: justify; font-size: 1rem; text-transform: lowercase;">
+				Hover over a term to get info
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	const data = {
+		servers: `
+<div>
+	<img id="banner" style="outline-color: rgb(35, 41, 58);" src="/spacecraft/banner.png" />
+	<img id="logo" style="outline-color: rgb(35, 41, 58);" src="/spacecraft/logo.png" />
+</div>
+<div>
+	<h1>Space Craft</h1>
+	<p>A Minecraft server where you battle your friends in space, build and gain money.</p>
+</div>
+`,
+		plugins: `
+<div>
+	<img id="banner" style="outline-color: rgb(93, 142, 80);" src="/packperregion/banner.png" />
+	<img id="logo" style="outline-color: rgb(93, 142, 80);" src="/packperregion/logo.png" />
+</div>
+<div>
+	<h1>Pack Per Region</h1>
+	<p>Allow server players to register regions in which a resource pack will be applied.</p>
+</div>
+`,
+		renders: `
+<img id="banner" style="outline-color: rgb(96, 100, 134);" src="/renders/winter.png" />
+<img id="banner" style="outline-color: rgb(110, 90, 73);" src="/renders/news.png" />
+`,
+		useful: `
+<div>
+	<img id="banner" style="outline-color: rgb(68, 24, 27);" src="/grid-calculator/banner.png" />
+	<img id="logo" style="outline-color: rgb(68, 24, 27);" src="/grid-calculator/logo.png" />
+</div>
+<div>
+	<h1>Grid Calculator</h1>
+	<p>Figure out the grid dimensions for your Minecraft logos in Adobe Illustrator.</p>
+</div>
+			`,
+		cool: `
+<div>
+	<img id="banner" style="outline-color: rgb(102, 102, 102);" src="/oref-client/banner.webp" />
+	<img id="logo" style="outline-color: rgb(102, 102, 102);" src="/oref-client/logo.webp" />
+</div>
+<div>
+	<h1>Oref Client</h1>
+	<p>An alternative website to view real-time missile alerts from Israel's National Emergency Portal (פיקוד העורף)</p>
+</div>
+`
+	}
+
+	document.querySelectorAll("span").forEach(tag => {
+		tag.addEventListener("mouseover", () => {
+			document.getElementById("card").innerHTML = data[tag.innerText]
+		});
+	});
+</script>
+</html>
