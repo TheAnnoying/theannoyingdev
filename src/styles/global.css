@@ -39,7 +39,7 @@ a {
 }
 
 .section {
-	border-bottom-width: 10px;
+	border-bottom-width: 10px !important;
 	border: 3px solid black;
 	font-family: monospace;
 	border-radius: 20px;
@@ -48,7 +48,8 @@ a {
 }
 
 span {
-	text-decoration: underline wavy;
+	color: black;
+	font-weight: 700;
 }
 
 #card #banner {
